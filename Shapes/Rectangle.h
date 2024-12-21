@@ -3,6 +3,7 @@
 #include "Shape.h"
 
 namespace Shapes {
+
     class Rectangle : public Shape {
     public:
         Rectangle(double width, double height);
@@ -12,6 +13,7 @@ namespace Shapes {
         double width;
         double height;
     };
+
 }
 
 

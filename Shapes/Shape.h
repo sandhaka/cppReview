@@ -3,13 +3,13 @@
 
 namespace Shapes {
 
-class Shape {
-    public:
-    virtual ~Shape() = default;
+    class Shape {
+        public:
+        virtual ~Shape() { }
 
-    virtual double Area() = 0;
-    virtual double Perimeter() = 0;
-};
+        virtual double Area() { return 0; }
+        virtual double Perimeter() { return 0; }
+    };
 
 } // Shapes
 
