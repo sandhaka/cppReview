@@ -9,4 +9,5 @@ add_executable(cppReview main.cpp
         Shapes/Rectangle.h
         Shapes/Square.cpp
         Shapes/Square.h
+        Shapes/NotDerivedRectangle.h
 )
