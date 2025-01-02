@@ -10,6 +10,7 @@
 #include "Shapes/Shape.h"
 #include "Shapes/ShapesComposition.h"
 #include "Shapes/Square.h"
+#include "Templates/ArrayOf2.h"
 
 int main() {
 
@@ -42,6 +43,12 @@ int main() {
 
     // Cannot instantiate an abstract class:
     // Birds::FlyingBird *bird = new Birds::FlyingBird(); // ERROR
+
+    /// Templates:
+    Templates::ArrayOf2<int> array;
+    array[0] = 1;
+    array[1] = 2;
+    std::cout << "Sum: " << array.sum() << "\n";
 
     return 0;
 }
