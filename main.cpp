@@ -11,6 +11,7 @@
 #include "Shapes/ShapesComposition.h"
 #include "Shapes/Square.h"
 #include "Templates/ArrayOf2.h"
+#include "Templates/Ratio.h"
 #include "Templates/Swap12.h"
 
 int main() {
@@ -58,6 +59,11 @@ int main() {
 
     // auto pair = Templates::swap12(9); // Run-time ERROR on time deduction
     auto successfulPair = Templates::swap12(std::make_pair(9, 10));
+
+    auto ratio = Templates::Ratio(2.0, 2.0);
+    const auto val = static_cast<double>(ratio);
+
+    std::cout << "Value: " << val << "\n";
 
     return 0;
 }
