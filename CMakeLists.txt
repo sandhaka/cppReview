@@ -11,4 +11,5 @@ add_executable(cppReview main.cpp
         Shapes/Square.h
         Shapes/NotDerivedRectangle.h
         Templates/ArrayOf2.h
+        Templates/Swap12.h
 )

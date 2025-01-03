@@ -11,6 +11,7 @@
 #include "Shapes/ShapesComposition.h"
 #include "Shapes/Square.h"
 #include "Templates/ArrayOf2.h"
+#include "Templates/Swap12.h"
 
 int main() {
 
@@ -41,6 +42,11 @@ int main() {
 
     // N.B. Original type encoded in derived type need size!
 
+    /// Const expressions:
+    /// - Are computed at compile-time
+    constexpr int x = 5 * 2;
+    int y = x; // y = 10
+
     // Cannot instantiate an abstract class:
     // Birds::FlyingBird *bird = new Birds::FlyingBird(); // ERROR
 
@@ -49,6 +55,9 @@ int main() {
     array[0] = 1;
     array[1] = 2;
     std::cout << "Sum: " << array.sum() << "\n";
+
+    // auto pair = Templates::swap12(9); // Run-time ERROR on time deduction
+    auto successfulPair = Templates::swap12(std::make_pair(9, 10));
 
     return 0;
 }
