@@ -60,8 +60,8 @@ int main() {
     // auto pair = Templates::swap12(9); // Run-time ERROR on time deduction
     auto successfulPair = Templates::swap12(std::make_pair(9, 10));
 
-    auto ratio = Templates::Ratio(2.0, 2.0);
-    const auto val = static_cast<double>(ratio);
+    auto ratio = Templates::Ratio(2.0, 2.0); // <double> are deduced
+    const auto val = static_cast<double>(ratio); // using the explicit operator
 
     std::cout << "Value: " << val << "\n";
 
