@@ -13,7 +13,7 @@ namespace Templates {
         Since `T` could be a fundamental type (e.g., `int`, `double`), `dynamic_cast<double>(numerator)` will fail to compile.
         Instead, `static_cast` (or implicit casting when possible) should be used
          */
-        explicit operator double() { return static_cast<double>(numerator) / denominator; }
+        explicit operator double() const { return static_cast<double>(numerator) / denominator; }
     private:
         T numerator;
         T denominator;
