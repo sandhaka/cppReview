@@ -82,6 +82,12 @@ int main() {
 
     std::cout << "Specialized Value: " << val_spec << "\n";
 
+    constexpr int three = 3; // Just to be explicit
+    auto partial_spec_ratio = Templates_Specialization::Ratio(2.0, three);
+    const auto val_partial_spec = static_cast<double>(partial_spec_ratio); // using the explicit operator
+
+    std::cout << "Partial Specialized Value: " << val_partial_spec << "\n";
+
     /*
      * NOTE: "Why not just create a separate class?"
      * Why specialization is useful if it's a complete new entity?
@@ -95,6 +101,9 @@ int main() {
      * If you create an entirely new class (not related by templates), you lose this organizational and conceptual link.
      * This can make the code harder to understand or maintain.
     */
+
+    int five = 5;
+    auto fiveVal = Templates_Specialization::Value<int*>(&five);
 
     return 0;
 }
