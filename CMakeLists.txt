@@ -14,4 +14,5 @@ add_executable(cppReview main.cpp
         Templates/Swap12.h
         Templates/Ratio.h
         Templates/Specialization/Ratio.h
+        Templates/Variadic/Group.h
 )
